@@ -74,8 +74,8 @@ export default function HomePage() {
         {/* BLOCK 01: HERO (Preserved intact) */}
         <Hero />
 
-        {/* BLOCK 02: THE CONSTRUCTION JOURNEY */}
-        <ConstructionJourney />
+        {/* BLOCK 02: THE CONSTRUCTION JOURNEY (Temporarily hidden) */}
+        {/* <ConstructionJourney /> */}
 
         {/* BLOCK 03: ABOUT CALISTA EPC */}
         <AboutSection />
