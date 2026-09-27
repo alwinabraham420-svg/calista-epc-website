@@ -77,14 +77,21 @@ export const ConstructionJourney: React.FC = () => {
         {/* ── Full-Width High-Quality Background Image (The Only Background Visual) ── */}
         <div
           ref={bgRef}
-          className="absolute inset-0 w-full h-full pointer-events-none select-none z-0 flex items-center justify-center overflow-hidden"
+          className="absolute inset-0 w-full h-full pointer-events-none select-none z-0 flex items-start lg:items-center justify-center pt-8 sm:pt-10 lg:pt-0 overflow-hidden"
         >
           {/* Direct high-resolution image rendering preserving 100% pixel sharpness without compression */}
-          <img
-            src="/images/journey/clean-architectural-bg.png"
-            alt="Calista EPC Architectural Construction Journey — Exploded Villa Blueprint & Structure"
-            className="w-full h-full object-cover lg:object-contain object-center [image-rendering:-webkit-optimize-contrast] [image-rendering:crisp-edges]"
-          />
+          <picture className="w-full h-full flex items-start lg:items-center justify-center">
+            <source
+              media="(min-width: 1024px)"
+              srcSet="/images/journey/clean-architectural-bg.png"
+            />
+            <img
+              src="/images/journey/layer-full-exploded.png"
+              alt="Calista EPC Architectural Construction Journey — Exploded Villa Blueprint & Structure"
+              className="w-full h-full object-contain object-top lg:object-contain lg:object-center"
+              style={{ filter: "none" }}
+            />
+          </picture>
         </div>
 
         {/* ── Main Container: Open Left/Center Area + Right Editorial Content ── */}
